@@ -34,17 +34,24 @@ public class Controle {
 		return grupos.add(grupo);
 	}
 
-	public boolean getGrupo(String nomeGrupo) { 
+	public Grupo getGrupo(String nomeGrupo) throws Exception { 
 		for (Grupo grupo : this.grupos) {
 			if (grupo.getNomeGrupo().equals(nomeGrupo)) {
-				return true;
+				return grupo;
 			}
 			
 		}
-		return false;
+		throw new Exception();
 	}
 
 	public boolean alocaAluno(String nomeGrupo, String matricula) {
+		this.getGrupo(nomeGrupo);
+		
+		
+		
+		
+
+		
 		
 
 	}
