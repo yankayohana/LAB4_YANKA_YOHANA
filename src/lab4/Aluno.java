@@ -6,7 +6,10 @@ public class Aluno {
 	private String nome;
 	private String curso;
 
-	public Aluno(String matricula, String nome, String curso) {
+	public Aluno(String matricula, String nome, String curso) throws Exception {
+		Validator.verificaString(matricula, "MATRÍCULA");
+		Validator.verificaString(nome, "NOME");
+		Validator.verificaString(curso, "CURSO");
 		this.matricula = matricula;
 		this.nome = nome;
 		this.curso = curso;

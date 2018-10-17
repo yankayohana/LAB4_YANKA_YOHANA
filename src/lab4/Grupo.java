@@ -21,6 +21,14 @@ public class Grupo {
 		return nomeGrupo;
 	}
 
+	public String toString() {
+		String saida = "Alunos do grupo " + this.nomeGrupo + ":" + System.lineSeparator();
+		for (Aluno aluno : this.grupo) {
+			saida += "*" + aluno.toString() + System.lineSeparator();
+		}
+		return saida;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -44,10 +52,6 @@ public class Grupo {
 		} else if (!nomeGrupo.equals(other.nomeGrupo))
 			return false;
 		return true;
-	}
-
-	public String toString() {
-		return "Grupo: " + this.nomeGrupo;
 	}
 
 }
